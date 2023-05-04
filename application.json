@@ -12,10 +12,6 @@
         {
             "_id": "home",
             "isDefault": true
-        },
-        {
-            "_id": "Page1",
-            "isDefault": false
         }
     ],
     "policies": [

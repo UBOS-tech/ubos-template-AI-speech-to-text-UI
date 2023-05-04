@@ -10,7 +10,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://whispernr-644f5dad65e54e10000001b5.ubos.tech"
+                    "url": "{{main.env.nr}}/uploadVideo"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -39,18 +39,24 @@
                         "value": true
                     }
                 ],
-                "path": "/uploadVideo",
+                "path": "",
                 "body": ""
             },
-            "dynamicBindingPathList": [],
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                }
+            ],
             "isValid": true,
             "invalids": [],
-            "jsonPathKeys": [],
+            "jsonPathKeys": [
+                "main.env.nr"
+            ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-04-25T10:46:33.202Z",
-        "updatedAt": "2023-05-02T07:20:40.037Z",
+        "updatedAt": "2023-05-04T09:17:40.670Z",
         "deleted": false,
         "policies": [
             {
@@ -81,7 +87,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://whispernr-644f5dad65e54e10000001b5.ubos.tech"
+                    "url": "{{main.env.nr}}/completions"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -110,25 +116,30 @@
                         "value": true
                     }
                 ],
-                "path": "/completions",
+                "path": "",
                 "body": "{\n\t\"prompt\": \"{{promtCopy.text}}\",\n\t\"data\": \"{{Custom1.message}}\"\n}"
             },
             "dynamicBindingPathList": [
                 {
                     "key": "body"
+                },
+                {
+                    "key": "datasourceUrl"
                 }
             ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
+                "main.env.nr",
                 "promtCopy.text",
-                "Custom1.message"
+                "Custom1.message",
+                "main.env.nr,2023-04-26T08:24:25.906Z,2023-05-04T09:17:20.030Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nr,2023-04-26T08:24:25.906Z,2023-05-04T09:17:40.012Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nr"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-04-26T08:24:25.906Z",
-        "updatedAt": "2023-05-02T07:20:41.233Z",
+        "updatedAt": "2023-05-04T09:17:41.705Z",
         "deleted": false,
         "policies": [
             {
