@@ -40,3 +40,9 @@ This tool is perfect for a wide range of use cases, including:
 With its user-friendly interface and powerful functionality, this tool makes it easy for anyone to harness the power of AI to streamline their audio transcription and analysis workflows. And with the ability to download transcripts, users can easily integrate them into their projects and workflows.
 
 In short, this repository provides a powerful and versatile tool for audio transcription and analysis. Whether you're a journalist, researcher, or just looking for an easier way to transcribe audio, this tool has everything you need to get the job done quickly and effectively.
+
+## Demo
+![speech-to-text-1](https://github.com/UBOS-tech/ubos-template-AI-speech-to-text-UI/assets/41735477/6027241e-0184-4003-ac1d-5a1e85940be1)
+![speech-to-text-2](https://github.com/UBOS-tech/ubos-template-AI-speech-to-text-UI/assets/41735477/c5de61f4-0cf7-4037-9dd3-4c3a4a2cf47e)
+![speech-to-text-3](https://github.com/UBOS-tech/ubos-template-AI-speech-to-text-UI/assets/41735477/9a6c1793-436a-476a-841d-c2e03ddbfd52)
+![speech-to-text-4](https://github.com/UBOS-tech/ubos-template-AI-speech-to-text-UI/assets/41735477/a3625695-2f93-4a88-abbd-d154cca2b421)
