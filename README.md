@@ -13,6 +13,13 @@ Speech to text
   <a href="https://github.com/UBOS-tech">GitHub</a>
   </h3>
 
+<div align="center">
+  
+  [![Use template](https://ubos.tech/wp-content/uploads/2023/06/download-logo.png)](https://platform.ubos.tech/?templateId=646318253023c6001004f3d8)
+  [![Demo](https://ubos.tech/wp-content/uploads/2023/06/Group-19.png)](https://youtu.be/GQJ3fz0e9p0)
+  
+</div>
+
 
 This repository provides a powerful tool for converting audio files to text using advanced AI technology. Using OpenAI's API, this tool allows users to quickly and easily transcribe audio recordings, saving time and effort compared to traditional transcription methods.
 
