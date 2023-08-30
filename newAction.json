@@ -56,7 +56,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-04-25T10:46:33.202Z",
-        "updatedAt": "2023-05-15T13:15:16.997Z",
+        "updatedAt": "2023-08-30T09:45:56.832Z",
         "deleted": false,
         "policies": [
             {
@@ -134,13 +134,13 @@
                 "url_yt.text",
                 "Switch1.isSwitchedOn",
                 "Select1Copy.selectedOptionValue",
-                "main.env.nr,2023-04-26T07:26:31.887Z,2023-05-15T13:15:28.381Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nr,2023-04-26T07:26:31.887Z,2023-05-15T13:15:35.218Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nr"
+                "main.env.nr,2023-04-26T07:26:31.887Z,2023-05-15T13:15:35.218Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nr,2023-04-26T07:26:31.887Z,2023-05-15T13:15:36.359Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nr"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-04-26T07:26:31.887Z",
-        "updatedAt": "2023-05-15T13:15:36.359Z",
+        "updatedAt": "2023-08-30T09:45:58.738Z",
         "deleted": false,
         "policies": [
             {
@@ -222,7 +222,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-04-26T08:24:25.906Z",
-        "updatedAt": "2023-05-15T13:41:17.443Z",
+        "updatedAt": "2023-08-30T09:45:56.236Z",
         "deleted": false,
         "policies": [
             {
@@ -304,7 +304,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-04-26T11:14:58.476Z",
-        "updatedAt": "2023-05-15T13:14:54.296Z",
+        "updatedAt": "2023-08-30T09:45:55.466Z",
         "deleted": false,
         "policies": [
             {
@@ -463,7 +463,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-05-03T10:47:04.912Z",
-        "updatedAt": "2023-05-15T13:15:58.969Z",
+        "updatedAt": "2023-08-30T09:46:06.341Z",
         "deleted": false,
         "policies": [
             {
@@ -545,7 +545,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-05-03T10:57:47.211Z",
-        "updatedAt": "2023-05-15T13:16:04.085Z",
+        "updatedAt": "2023-08-30T09:46:07.308Z",
         "deleted": false,
         "policies": [
             {
@@ -628,7 +628,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-05-03T11:09:06.512Z",
-        "updatedAt": "2023-05-15T13:16:31.763Z",
+        "updatedAt": "2023-08-30T09:46:12.777Z",
         "deleted": false,
         "policies": [
             {
@@ -710,7 +710,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-05-03T11:24:06.651Z",
-        "updatedAt": "2023-05-15T13:16:38.430Z",
+        "updatedAt": "2023-08-30T09:46:11.033Z",
         "deleted": false,
         "policies": [
             {
@@ -792,7 +792,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-05-03T11:24:20.425Z",
-        "updatedAt": "2023-05-15T13:16:37.684Z",
+        "updatedAt": "2023-08-30T09:46:11.945Z",
         "deleted": false,
         "policies": [
             {
@@ -866,16 +866,15 @@
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
-                "main.env",
+                "main.env.nr",
                 "Input1.text",
-                "Text6Copy.text",
-                "main.env.nr"
+                "Text6Copy.text"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-05-03T15:35:37.096Z",
-        "updatedAt": "2023-05-15T13:14:38.376Z",
+        "updatedAt": "2023-08-30T09:45:53.161Z",
         "deleted": false,
         "policies": [
             {
@@ -958,7 +957,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-05-03T15:38:03.803Z",
-        "updatedAt": "2023-05-15T13:15:44.552Z",
+        "updatedAt": "2023-08-30T09:45:59.537Z",
         "deleted": false,
         "policies": [
             {
@@ -1040,7 +1039,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-05-03T15:39:22.125Z",
-        "updatedAt": "2023-05-15T13:14:48.313Z",
+        "updatedAt": "2023-08-30T09:45:54.667Z",
         "deleted": false,
         "policies": [
             {

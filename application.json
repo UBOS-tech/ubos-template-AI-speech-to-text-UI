@@ -49,7 +49,7 @@
         }
     ],
     "global_setting": {
-        "css": "https://nodered-9137-644797ab65e54e1000000069.ubos.tech/css"
+        "css": "${env.get(\"nodeUrl\")}/css"
     },
     "gitApplicationMetadata": {
         "browserSupportedRemoteUrl": "https://github.com/UBOS-tech/ubos-template-AI-speech-to-text-UI",

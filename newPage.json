@@ -76,7 +76,7 @@
                                                 "parentRowSpace": 10,
                                                 "leftColumn": 0,
                                                 "rightColumn": 64,
-                                                "topRow": 126,
+                                                "topRow": 125,
                                                 "bottomRow": 152,
                                                 "parentId": "8167s8nrpx",
                                                 "dynamicBindingPathList": [],
@@ -420,7 +420,7 @@
                                                                         "key": "onMessageReceived"
                                                                     }
                                                                 ],
-                                                                "data_object": "{{{url: 'https://nodered-9137-644797ab65e54e1000000069.ubos.tech', lan: Select1Copy.selectedOptionValue, translate: Switch1.isSwitchedOn}}}",
+                                                                "data_object": "{{{url: main.env.nr, lan: Select1Copy.selectedOptionValue, translate: Switch1.isSwitchedOn}}}",
                                                                 "onMessageReceived": "",
                                                                 "customIsLoading": false,
                                                                 "borderColor": "#0a5dc2"
@@ -1713,7 +1713,7 @@
                                                                         "key": "onMessageReceived"
                                                                     }
                                                                 ],
-                                                                "data_object": "{{{url: 'https://nodered-9137-644797ab65e54e1000000069.ubos.tech', lan: Select1Copy.selectedOptionValue, translate: Switch1.isSwitchedOn}}}",
+                                                                "data_object": "{{{url: main.env.nr, lan: Select1Copy.selectedOptionValue, translate: Switch1.isSwitchedOn}}}",
                                                                 "onMessageReceived": "",
                                                                 "customIsLoading": false,
                                                                 "borderColor": "#0a5dc2"
@@ -2681,7 +2681,7 @@
                                                                 "parentColumnSpace": 18.734375,
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 0,
-                                                                "rightColumn": 24,
+                                                                "rightColumn": 25,
                                                                 "topRow": 0,
                                                                 "bottomRow": 9,
                                                                 "parentId": "58klwxrep2",
