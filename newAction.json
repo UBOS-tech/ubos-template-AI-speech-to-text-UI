@@ -1,16 +1,16 @@
 [
     {
-        "_id": "6447af8919e18934f9821972",
+        "_id": "65c001f4430e854fe93d6cf0",
         "applicationId": "whisperui",
         "organizationId": "Org",
         "pluginType": "API",
         "pluginId": "API",
         "Action": {
-            "name": "upload",
+            "name": "convertSpeech",
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "{{main.env.nr}}/uploadVideo"
+                    "url": "{{main.env.nr}}/convertSpeech"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -18,9 +18,9 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "home",
+            "pageId": "Speech To Text",
             "actionConfiguration": {
-                "timeoutInMillisecond": "30000",
+                "timeoutInMillisecond": "70000",
                 "encodeParamsToggle": true,
                 "httpMethod": "POST",
                 "headers": [
@@ -40,84 +40,7 @@
                     }
                 ],
                 "path": "",
-                "body": ""
-            },
-            "dynamicBindingPathList": [
-                {
-                    "key": "datasourceUrl"
-                }
-            ],
-            "isValid": true,
-            "invalids": [],
-            "jsonPathKeys": [
-                "main.env.nr"
-            ],
-            "userSetOnLoad": false,
-            "confirmBeforeExecute": false
-        },
-        "createdAt": "2023-04-25T10:46:33.202Z",
-        "updatedAt": "2023-08-30T09:45:56.832Z",
-        "deleted": false,
-        "policies": [
-            {
-                "permission": "read:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "manage:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "execute:actions",
-                "groups": [],
-                "users": []
-            }
-        ]
-    },
-    {
-        "_id": "6448d22719e18934f9821973",
-        "applicationId": "whisperui",
-        "organizationId": "Org",
-        "pluginType": "API",
-        "pluginId": "API",
-        "Action": {
-            "name": "url",
-            "datasource": {
-                "name": "DEFAULT_REST_DATASOURCE",
-                "datasourceConfiguration": {
-                    "url": "{{main.env.nr}}/urlVideo"
-                },
-                "invalids": [],
-                "isValid": true,
-                "pluginId": "API",
-                "messages": []
-            },
-            "executeOnLoad": false,
-            "pageId": "home",
-            "actionConfiguration": {
-                "timeoutInMillisecond": "90000",
-                "encodeParamsToggle": true,
-                "httpMethod": "POST",
-                "headers": [
-                    {
-                        "key": "content-type",
-                        "value": "application/json"
-                    }
-                ],
-                "queryParameters": [],
-                "bodyFormData": [],
-                "formData": {
-                    "apiContentType": "none"
-                },
-                "pluginSpecifiedTemplates": [
-                    {
-                        "value": true
-                    }
-                ],
-                "path": "",
-                "body": "{\n\t\"url\": \"{{url_yt.text}}\",\n\t\"translate\": \"{{Switch1.isSwitchedOn}}\",\n\t\"lan\": \"{{Select1Copy.selectedOptionValue}}\"\n}"
+                "body": "{\n\t\"url\": {{JSON.stringify(url_input.text)}},\n\t\"lan\": {{JSON.stringify(language_select.selectedOptionValue)}},\n\t\"key\": {{JSON.stringify(key_input.text)}},\n\t\"type\":\"url\"\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -131,16 +54,16 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nr",
-                "url_yt.text",
-                "Switch1.isSwitchedOn",
-                "Select1Copy.selectedOptionValue",
-                "main.env.nr,2023-04-26T07:26:31.887Z,2023-05-15T13:15:35.218Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nr,2023-04-26T07:26:31.887Z,2023-05-15T13:15:36.359Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nr"
+                "JSON.stringify(url_input.text)",
+                "JSON.stringify(language_select.selectedOptionValue)",
+                "JSON.stringify(key_input.text)",
+                "main.env.nr,2024-02-04T21:30:28.082Z,2024-02-07T11:29:15.478Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nr,2024-02-04T21:30:28.082Z,2024-03-11T13:19:50.212Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.nr"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
-        "createdAt": "2023-04-26T07:26:31.887Z",
-        "updatedAt": "2023-08-30T09:45:58.738Z",
+        "createdAt": "2024-02-04T21:30:28.082Z",
+        "updatedAt": "2024-03-11T13:21:05.052Z",
         "deleted": false,
         "policies": [
             {
@@ -161,17 +84,17 @@
         ]
     },
     {
-        "_id": "6448dfb919e18934f9821974",
+        "_id": "65c001f4430e854fe93d6cf1",
         "applicationId": "whisperui",
         "organizationId": "Org",
         "pluginType": "API",
         "pluginId": "API",
         "Action": {
-            "name": "daVinci3",
+            "name": "getConclusion",
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "{{main.env.nr}}/completions"
+                    "url": "{{main.env.nr}}/conclusions"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -179,248 +102,7 @@
                 "messages": []
             },
             "executeOnLoad": false,
-            "pageId": "home",
-            "actionConfiguration": {
-                "timeoutInMillisecond": 10000,
-                "encodeParamsToggle": true,
-                "httpMethod": "POST",
-                "headers": [
-                    {
-                        "key": "content-type",
-                        "value": "application/json"
-                    }
-                ],
-                "queryParameters": [],
-                "bodyFormData": [],
-                "formData": {
-                    "apiContentType": "none"
-                },
-                "pluginSpecifiedTemplates": [
-                    {
-                        "value": true
-                    }
-                ],
-                "path": "",
-                "body": "{\n\t\"prompt\": \"{{promtCopy.text}}\",\n\t\"data\": \"{{Custom1.message}}\"\n}"
-            },
-            "dynamicBindingPathList": [
-                {
-                    "key": "body"
-                },
-                {
-                    "key": "datasourceUrl"
-                }
-            ],
-            "isValid": true,
-            "invalids": [],
-            "jsonPathKeys": [
-                "main.env.nr",
-                "promtCopy.text",
-                "Custom1.message"
-            ],
-            "userSetOnLoad": false,
-            "confirmBeforeExecute": false
-        },
-        "createdAt": "2023-04-26T08:24:25.906Z",
-        "updatedAt": "2023-08-30T09:45:56.236Z",
-        "deleted": false,
-        "policies": [
-            {
-                "permission": "read:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "manage:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "execute:actions",
-                "groups": [],
-                "users": []
-            }
-        ]
-    },
-    {
-        "_id": "644907b219e18934f9821976",
-        "applicationId": "whisperui",
-        "organizationId": "Org",
-        "pluginType": "API",
-        "pluginId": "API",
-        "Action": {
-            "name": "davinchi3",
-            "datasource": {
-                "name": "DEFAULT_REST_DATASOURCE",
-                "datasourceConfiguration": {
-                    "url": "{{main.env.nr}}/completions"
-                },
-                "invalids": [],
-                "isValid": true,
-                "pluginId": "API",
-                "messages": []
-            },
-            "executeOnLoad": false,
-            "pageId": "home",
-            "actionConfiguration": {
-                "timeoutInMillisecond": 10000,
-                "encodeParamsToggle": true,
-                "httpMethod": "POST",
-                "headers": [
-                    {
-                        "key": "content-type",
-                        "value": "application/json"
-                    }
-                ],
-                "queryParameters": [],
-                "bodyFormData": [],
-                "formData": {
-                    "apiContentType": "none"
-                },
-                "pluginSpecifiedTemplates": [
-                    {
-                        "value": true
-                    }
-                ],
-                "path": "",
-                "body": "{\n\t\"prompt\": \"{{promt.text}}\",\n\t\"data\": \"{{Text3.text}}\"\n}"
-            },
-            "dynamicBindingPathList": [
-                {
-                    "key": "body"
-                },
-                {
-                    "key": "datasourceUrl"
-                }
-            ],
-            "isValid": true,
-            "invalids": [],
-            "jsonPathKeys": [
-                "main.env.nr",
-                "promt.text",
-                "Text3.text"
-            ],
-            "userSetOnLoad": false,
-            "confirmBeforeExecute": false
-        },
-        "createdAt": "2023-04-26T11:14:58.476Z",
-        "updatedAt": "2023-08-30T09:45:55.466Z",
-        "deleted": false,
-        "policies": [
-            {
-                "permission": "read:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "manage:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "execute:actions",
-                "groups": [],
-                "users": []
-            }
-        ]
-    },
-    {
-        "_id": "645213adecd752ebd7145341",
-        "applicationId": "whisperui",
-        "organizationId": "Org",
-        "pluginType": "API",
-        "pluginId": "API",
-        "Action": {
-            "name": "translate",
-            "datasource": {
-                "name": "DEFAULT_REST_DATASOURCE",
-                "datasourceConfiguration": {
-                    "url": "{{main.env.nr}}/translateVideo"
-                },
-                "invalids": [],
-                "isValid": true,
-                "pluginId": "API",
-                "messages": []
-            },
-            "executeOnLoad": false,
-            "pageId": "home",
-            "actionConfiguration": {
-                "timeoutInMillisecond": 10000,
-                "encodeParamsToggle": true,
-                "httpMethod": "POST",
-                "headers": [
-                    {
-                        "key": "content-type",
-                        "value": "application/json"
-                    }
-                ],
-                "queryParameters": [],
-                "bodyFormData": [],
-                "formData": {
-                    "apiContentType": "none"
-                },
-                "pluginSpecifiedTemplates": [
-                    {
-                        "value": true
-                    }
-                ],
-                "path": "",
-                "body": ""
-            },
-            "dynamicBindingPathList": [
-                {
-                    "key": "datasourceUrl"
-                }
-            ],
-            "isValid": true,
-            "invalids": [],
-            "jsonPathKeys": [
-                "main.env.nr"
-            ],
-            "userSetOnLoad": false,
-            "confirmBeforeExecute": false
-        },
-        "createdAt": "2023-05-03T07:56:29.292Z",
-        "updatedAt": "2023-05-15T13:15:23.323Z",
-        "deleted": false,
-        "policies": [
-            {
-                "permission": "read:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "manage:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "execute:actions",
-                "groups": [],
-                "users": []
-            }
-        ]
-    },
-    {
-        "_id": "64523ba8ecd752ebd7145346",
-        "applicationId": "whisperui",
-        "organizationId": "Org",
-        "pluginType": "API",
-        "pluginId": "API",
-        "Action": {
-            "name": "completions",
-            "datasource": {
-                "name": "DEFAULT_REST_DATASOURCE",
-                "datasourceConfiguration": {
-                    "url": "{{main.env.nr}}/completions"
-                },
-                "invalids": [],
-                "isValid": true,
-                "pluginId": "API",
-                "messages": []
-            },
-            "executeOnLoad": false,
-            "pageId": "Upload",
+            "pageId": "Speech To Text",
             "actionConfiguration": {
                 "timeoutInMillisecond": "20000",
                 "encodeParamsToggle": true,
@@ -441,90 +123,8 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"data\": \"{{Text6.text}}\",\n\t\"prompt\": \"{{Input1.text}}\"\n}",
-                "path": ""
-            },
-            "dynamicBindingPathList": [
-                {
-                    "key": "body"
-                },
-                {
-                    "key": "datasourceUrl"
-                }
-            ],
-            "isValid": true,
-            "invalids": [],
-            "jsonPathKeys": [
-                "main.env.nr",
-                "Text6.text",
-                "Input1.text"
-            ],
-            "userSetOnLoad": false,
-            "confirmBeforeExecute": false
-        },
-        "createdAt": "2023-05-03T10:47:04.912Z",
-        "updatedAt": "2023-08-30T09:46:06.341Z",
-        "deleted": false,
-        "policies": [
-            {
-                "permission": "read:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "manage:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "execute:actions",
-                "groups": [],
-                "users": []
-            }
-        ]
-    },
-    {
-        "_id": "64523e2becd752ebd7145347",
-        "applicationId": "whisperui",
-        "organizationId": "Org",
-        "pluginType": "API",
-        "pluginId": "API",
-        "Action": {
-            "name": "completions2",
-            "datasource": {
-                "name": "DEFAULT_REST_DATASOURCE",
-                "datasourceConfiguration": {
-                    "url": "{{main.env.nr}}/completions"
-                },
-                "invalids": [],
-                "isValid": true,
-                "pluginId": "API",
-                "messages": []
-            },
-            "executeOnLoad": false,
-            "pageId": "Upload",
-            "actionConfiguration": {
-                "timeoutInMillisecond": 10000,
-                "encodeParamsToggle": true,
-                "httpMethod": "POST",
-                "headers": [
-                    {
-                        "key": "content-type",
-                        "value": "application/json"
-                    }
-                ],
-                "queryParameters": [],
-                "bodyFormData": [],
-                "formData": {
-                    "apiContentType": "none"
-                },
-                "pluginSpecifiedTemplates": [
-                    {
-                        "value": true
-                    }
-                ],
                 "path": "",
-                "body": "{\n\t\"data\": \"{{Text5Copy.text}}\",\n\t\"prompt\": \"{{Input1Copy.text}}\"\n}"
+                "body": "{\n\t\"prompt\": {{JSON.stringify(prompt_input.text)}},\n\t\"data\": {{JSON.stringify(converted_text.text)}}\n}\n"
             },
             "dynamicBindingPathList": [
                 {
@@ -538,508 +138,14 @@
             "invalids": [],
             "jsonPathKeys": [
                 "main.env.nr",
-                "Text5Copy.text",
-                "Input1Copy.text"
+                "JSON.stringify(prompt_input.text)",
+                "JSON.stringify(converted_text.text)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
-        "createdAt": "2023-05-03T10:57:47.211Z",
-        "updatedAt": "2023-08-30T09:46:07.308Z",
-        "deleted": false,
-        "policies": [
-            {
-                "permission": "read:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "manage:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "execute:actions",
-                "groups": [],
-                "users": []
-            }
-        ]
-    },
-    {
-        "_id": "645240d2ecd752ebd7145348",
-        "applicationId": "whisperui",
-        "organizationId": "Org",
-        "pluginType": "API",
-        "pluginId": "API",
-        "Action": {
-            "name": "upload",
-            "datasource": {
-                "name": "DEFAULT_REST_DATASOURCE",
-                "datasourceConfiguration": {
-                    "url": "{{main.env.nr}}/urlVideo"
-                },
-                "invalids": [],
-                "isValid": true,
-                "pluginId": "API",
-                "messages": []
-            },
-            "executeOnLoad": false,
-            "pageId": "YouTube",
-            "actionConfiguration": {
-                "timeoutInMillisecond": "90000",
-                "encodeParamsToggle": true,
-                "httpMethod": "POST",
-                "headers": [
-                    {
-                        "key": "content-type",
-                        "value": "application/json"
-                    }
-                ],
-                "queryParameters": [],
-                "bodyFormData": [],
-                "formData": {
-                    "apiContentType": "none"
-                },
-                "pluginSpecifiedTemplates": [
-                    {
-                        "value": true
-                    }
-                ],
-                "body": "{\n\t\"url\": \"{{Input2.text}}\",\n\t\"lan\": \"{{main.URL.queryParams.lan}}\",\n\t\"translate\": \"{{main.URL.queryParams.trans}}\"\n}",
-                "path": ""
-            },
-            "dynamicBindingPathList": [
-                {
-                    "key": "body"
-                },
-                {
-                    "key": "datasourceUrl"
-                }
-            ],
-            "isValid": true,
-            "invalids": [],
-            "jsonPathKeys": [
-                "main.env.nr",
-                "Input2.text",
-                "main.URL.queryParams.lan",
-                "main.URL.queryParams.trans"
-            ],
-            "userSetOnLoad": false,
-            "confirmBeforeExecute": false
-        },
-        "createdAt": "2023-05-03T11:09:06.512Z",
-        "updatedAt": "2023-08-30T09:46:12.777Z",
-        "deleted": false,
-        "policies": [
-            {
-                "permission": "read:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "manage:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "execute:actions",
-                "groups": [],
-                "users": []
-            }
-        ]
-    },
-    {
-        "_id": "64524456ecd752ebd7145349",
-        "applicationId": "whisperui",
-        "organizationId": "Org",
-        "pluginType": "API",
-        "pluginId": "API",
-        "Action": {
-            "name": "completions",
-            "datasource": {
-                "name": "DEFAULT_REST_DATASOURCE",
-                "datasourceConfiguration": {
-                    "url": "{{main.env.nr}}/completions"
-                },
-                "invalids": [],
-                "isValid": true,
-                "pluginId": "API",
-                "messages": []
-            },
-            "executeOnLoad": false,
-            "pageId": "YouTube",
-            "actionConfiguration": {
-                "timeoutInMillisecond": 10000,
-                "encodeParamsToggle": true,
-                "httpMethod": "POST",
-                "headers": [
-                    {
-                        "key": "content-type",
-                        "value": "application/json"
-                    }
-                ],
-                "queryParameters": [],
-                "bodyFormData": [],
-                "formData": {
-                    "apiContentType": "none"
-                },
-                "pluginSpecifiedTemplates": [
-                    {
-                        "value": true
-                    }
-                ],
-                "path": "",
-                "body": "{\n\t\"data\": \"{{Text6.text}}\",\n\t\"prompt\": \"{{Input1.text}}\"\n}"
-            },
-            "dynamicBindingPathList": [
-                {
-                    "key": "body"
-                },
-                {
-                    "key": "datasourceUrl"
-                }
-            ],
-            "isValid": true,
-            "invalids": [],
-            "jsonPathKeys": [
-                "main.env.nr",
-                "Text6.text",
-                "Input1.text"
-            ],
-            "userSetOnLoad": false,
-            "confirmBeforeExecute": false
-        },
-        "createdAt": "2023-05-03T11:24:06.651Z",
-        "updatedAt": "2023-08-30T09:46:11.033Z",
-        "deleted": false,
-        "policies": [
-            {
-                "permission": "read:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "manage:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "execute:actions",
-                "groups": [],
-                "users": []
-            }
-        ]
-    },
-    {
-        "_id": "64524464ecd752ebd714534a",
-        "applicationId": "whisperui",
-        "organizationId": "Org",
-        "pluginType": "API",
-        "pluginId": "API",
-        "Action": {
-            "name": "completions2",
-            "datasource": {
-                "name": "DEFAULT_REST_DATASOURCE",
-                "datasourceConfiguration": {
-                    "url": "{{main.env.nr}}/completions"
-                },
-                "invalids": [],
-                "isValid": true,
-                "pluginId": "API",
-                "messages": []
-            },
-            "executeOnLoad": false,
-            "pageId": "YouTube",
-            "actionConfiguration": {
-                "timeoutInMillisecond": 10000,
-                "encodeParamsToggle": true,
-                "httpMethod": "POST",
-                "headers": [
-                    {
-                        "key": "content-type",
-                        "value": "application/json"
-                    }
-                ],
-                "queryParameters": [],
-                "bodyFormData": [],
-                "formData": {
-                    "apiContentType": "none"
-                },
-                "pluginSpecifiedTemplates": [
-                    {
-                        "value": true
-                    }
-                ],
-                "path": "",
-                "body": "{\n\t\"data\": \"{{Text5Copy.text}}\",\n\t\"prompt\": \"{{Input1Copy.text}}\"\n}"
-            },
-            "dynamicBindingPathList": [
-                {
-                    "key": "body"
-                },
-                {
-                    "key": "datasourceUrl"
-                }
-            ],
-            "isValid": true,
-            "invalids": [],
-            "jsonPathKeys": [
-                "main.env.nr",
-                "Text5Copy.text",
-                "Input1Copy.text"
-            ],
-            "userSetOnLoad": false,
-            "confirmBeforeExecute": false
-        },
-        "createdAt": "2023-05-03T11:24:20.425Z",
-        "updatedAt": "2023-08-30T09:46:11.945Z",
-        "deleted": false,
-        "policies": [
-            {
-                "permission": "read:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "manage:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "execute:actions",
-                "groups": [],
-                "users": []
-            }
-        ]
-    },
-    {
-        "_id": "64527f49ecd752ebd714534b",
-        "applicationId": "whisperui",
-        "organizationId": "Org",
-        "pluginType": "API",
-        "pluginId": "API",
-        "Action": {
-            "name": "completions",
-            "datasource": {
-                "name": "DEFAULT_REST_DATASOURCE",
-                "datasourceConfiguration": {
-                    "url": "{{main.env.nr}}/completions"
-                },
-                "invalids": [],
-                "isValid": true,
-                "pluginId": "API",
-                "messages": []
-            },
-            "executeOnLoad": false,
-            "pageId": "home",
-            "actionConfiguration": {
-                "timeoutInMillisecond": 10000,
-                "encodeParamsToggle": true,
-                "httpMethod": "POST",
-                "headers": [
-                    {
-                        "key": "content-type",
-                        "value": "application/json"
-                    }
-                ],
-                "queryParameters": [],
-                "bodyFormData": [],
-                "formData": {
-                    "apiContentType": "none"
-                },
-                "pluginSpecifiedTemplates": [
-                    {
-                        "value": true
-                    }
-                ],
-                "path": "",
-                "body": "{\n\t\"prompt\": \"{{Input1.text}}\",\n\t\"data\": \"{{Text6Copy.text}}\"\n}"
-            },
-            "dynamicBindingPathList": [
-                {
-                    "key": "body"
-                },
-                {
-                    "key": "datasourceUrl"
-                }
-            ],
-            "isValid": true,
-            "invalids": [],
-            "jsonPathKeys": [
-                "main.env.nr",
-                "Input1.text",
-                "Text6Copy.text"
-            ],
-            "userSetOnLoad": false,
-            "confirmBeforeExecute": false
-        },
-        "createdAt": "2023-05-03T15:35:37.096Z",
-        "updatedAt": "2023-08-30T09:45:53.161Z",
-        "deleted": false,
-        "policies": [
-            {
-                "permission": "read:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "manage:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "execute:actions",
-                "groups": [],
-                "users": []
-            }
-        ]
-    },
-    {
-        "_id": "64527fdbecd752ebd714534c",
-        "applicationId": "whisperui",
-        "organizationId": "Org",
-        "pluginType": "API",
-        "pluginId": "API",
-        "Action": {
-            "name": "urlVideo2",
-            "datasource": {
-                "name": "DEFAULT_REST_DATASOURCE",
-                "datasourceConfiguration": {
-                    "url": "{{main.env.nr}}/urlVideo"
-                },
-                "invalids": [],
-                "isValid": true,
-                "pluginId": "API",
-                "messages": []
-            },
-            "executeOnLoad": false,
-            "pageId": "home",
-            "actionConfiguration": {
-                "timeoutInMillisecond": "110000",
-                "encodeParamsToggle": true,
-                "httpMethod": "POST",
-                "headers": [
-                    {
-                        "key": "content-type",
-                        "value": "application/json"
-                    }
-                ],
-                "queryParameters": [],
-                "bodyFormData": [],
-                "formData": {
-                    "apiContentType": "none"
-                },
-                "pluginSpecifiedTemplates": [
-                    {
-                        "value": true
-                    }
-                ],
-                "path": "",
-                "body": "{\n\t\"url\": \"{{url_ytCopy.text}}\",\n\t\"translate\": \"{{Switch1.isSwitchedOn}}\",\n\t\"lan\": \"{{Select1Copy.selectedOptionValue}}\"\n}"
-            },
-            "dynamicBindingPathList": [
-                {
-                    "key": "body"
-                },
-                {
-                    "key": "datasourceUrl"
-                }
-            ],
-            "isValid": true,
-            "invalids": [],
-            "jsonPathKeys": [
-                "main.env.nr",
-                "url_ytCopy.text",
-                "Switch1.isSwitchedOn",
-                "Select1Copy.selectedOptionValue"
-            ],
-            "userSetOnLoad": false,
-            "confirmBeforeExecute": false
-        },
-        "createdAt": "2023-05-03T15:38:03.803Z",
-        "updatedAt": "2023-08-30T09:45:59.537Z",
-        "deleted": false,
-        "policies": [
-            {
-                "permission": "read:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "manage:actions",
-                "groups": [],
-                "users": []
-            },
-            {
-                "permission": "execute:actions",
-                "groups": [],
-                "users": []
-            }
-        ]
-    },
-    {
-        "_id": "6452802aecd752ebd714534d",
-        "applicationId": "whisperui",
-        "organizationId": "Org",
-        "pluginType": "API",
-        "pluginId": "API",
-        "Action": {
-            "name": "completions2",
-            "datasource": {
-                "name": "DEFAULT_REST_DATASOURCE",
-                "datasourceConfiguration": {
-                    "url": "{{main.env.nr}}/completions"
-                },
-                "invalids": [],
-                "isValid": true,
-                "pluginId": "API",
-                "messages": []
-            },
-            "executeOnLoad": false,
-            "pageId": "home",
-            "actionConfiguration": {
-                "timeoutInMillisecond": 10000,
-                "encodeParamsToggle": true,
-                "httpMethod": "POST",
-                "headers": [
-                    {
-                        "key": "content-type",
-                        "value": "application/json"
-                    }
-                ],
-                "queryParameters": [],
-                "bodyFormData": [],
-                "formData": {
-                    "apiContentType": "none"
-                },
-                "pluginSpecifiedTemplates": [
-                    {
-                        "value": true
-                    }
-                ],
-                "path": "",
-                "body": "{\n\t\"prompt\": \"{{Input1Copy1.text}}\",\n\t\"data\": \"{{Text6CopyCopy.text}}\"\n}"
-            },
-            "dynamicBindingPathList": [
-                {
-                    "key": "body"
-                },
-                {
-                    "key": "datasourceUrl"
-                }
-            ],
-            "isValid": true,
-            "invalids": [],
-            "jsonPathKeys": [
-                "main.env.nr",
-                "Input1Copy1.text",
-                "Text6CopyCopy.text"
-            ],
-            "userSetOnLoad": false,
-            "confirmBeforeExecute": false
-        },
-        "createdAt": "2023-05-03T15:39:22.125Z",
-        "updatedAt": "2023-08-30T09:45:54.667Z",
+        "createdAt": "2024-02-04T21:30:28.082Z",
+        "updatedAt": "2024-03-11T13:21:05.449Z",
         "deleted": false,
         "policies": [
             {
